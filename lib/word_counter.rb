@@ -1,15 +1,27 @@
+def shakespeare
+	return shakespeare = File.read('lib/shakespeare.txt')
+
+end
+
 def dictionary
 	dictionary = ["below", "down", "go", "going", "horn", "how", "howdy", "it", "i", "low", "own", "part", "partner", "sit"]
 end
 
+def dictionarry
+	dictionnary = ["the", "of", "and", "to", "a", "in", "for", "is", "on", "that", "by", "this", "with", "i", "you", "it", "not", "or", "be", "are"]
+end
 
-def word_counter(a, dictionary)
+
+def word_counter(a, b)
 	occurance = {}
-	dictionary.each do |word|
+	b.each do |word|
 		nb_it_appear = a.downcase.scan(/(?=#{word})/).length
 		if nb_it_appear > 0
 			occurance[word] = nb_it_appear
 		end
 	end
+	print occurance
 	return occurance
 end
+
+word_counter(shakespeare, dictionarry)
