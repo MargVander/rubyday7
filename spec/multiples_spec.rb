@@ -23,6 +23,6 @@ describe "the sum_of_3_or_5_multiples method" do
 	end
 
 	it "should work if n isn't an integer" do
-		expect(sum_of_3_or_5_multiples(10.5)).to eq("Yo ! Je ne prends que les entiers naturels. TG")
+		expect(sum_of_3_or_5_multiples("chiffre")).to eq("Yo ! Je ne prends que les entiers naturels. TG")
 	end
 end

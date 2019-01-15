@@ -12,13 +12,13 @@ end
 def sum_of_3_or_5_multiples(n)
   i = 0
   sum = 0
-  if n != n.to_i
+  if n != n.to_i || n < 0
   	return "Yo ! Je ne prends que les entiers naturels. TG"
   else
   	while i < n
   		if is_multiple_of_3_or_5?(i)
   			answer = true
-  			sum = sum + i
+  			sum += i
   			i += 1
   		else
   			i += 1
@@ -27,5 +27,3 @@ def sum_of_3_or_5_multiples(n)
   	return sum
   end
 end
-
-puts sum_of_3_or_5_multiples(11)
