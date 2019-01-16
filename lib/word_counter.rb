@@ -33,5 +33,3 @@ def word_counter(a, b)
 	print occurance
 	return occurance
 end
-
-word_counter(shakespeare, slur)
