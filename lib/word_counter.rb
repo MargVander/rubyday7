@@ -11,6 +11,16 @@ def dictionarry
 	dictionnary = ["the", "of", "and", "to", "a", "in", "for", "is", "on", "that", "by", "this", "with", "i", "you", "it", "not", "or", "be", "are"]
 end
 
+def slur
+	slur = []
+	file = 'lib/slur.txt'
+	File.readlines(file).each do |line|
+		line = line.chop
+		slur << line
+	end
+	return slur
+end
+
 
 def word_counter(a, b)
 	occurance = {}
@@ -24,4 +34,4 @@ def word_counter(a, b)
 	return occurance
 end
 
-word_counter(shakespeare, dictionarry)
+word_counter(shakespeare, slur)
